@@ -173,7 +173,7 @@ export async function fetchInvoiceById(id: string) {
       ...invoice,
       // Convert amount from cents to dollars
       amount: invoice.amount / 100,
-    }));
+    })); // returns empty array if invoice was not found
 
     return invoice[0];
   } catch (error) {
